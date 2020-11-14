@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="header__container">
+    {% include 'logo.njk' %}
+
+    <nav class="header__navigation main-navigation">
+      {% set navigation = {
+        'Home': '#',
+        'Recipes': '#',
+        'Article': '#',
+        'Contact': '#',
+        'Purchase': '#'
+      } %}
+      <ul class="main-navigation__list">
+        {% for caption, link in navigation %}
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="{{ link }}">{{ caption }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <form class="header__search search">
+      <input class="search__input" type="search">
+      <button class="search__open" type="button"></button>
+    </form>
+  </div>
+</header>
