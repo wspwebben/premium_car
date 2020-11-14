@@ -1,0 +1,12 @@
+@use 'mixin';
+@use 'font';
+
+@function generateUrl($url, $extension: 'woff2') {
+  $dir: '../fonts/';
+
+  @return $dir + $url + '.' + $extension;
+}
+
+@include mixin.font(font.$family, generateUrl('PTSans-Regular'));
+@include mixin.font(font.$family, generateUrl('PTSans-Bold'), $weight: font.$weight-bold);
+@include mixin.font(font.$family, generateUrl('PTSans-Italic'), $style: font.$style-italic);
