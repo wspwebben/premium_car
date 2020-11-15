@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="header__container">
+  <div class="header__container container">
     {% include 'logo.njk' %}
 
     <nav class="header__navigation main-navigation">
@@ -21,7 +21,11 @@
 
     <form class="header__search search">
       <input class="search__input" type="search">
-      <button class="search__open" type="button"></button>
+      <button class="search__open" type="button">
+        <svg width="16" height="17">
+          <use xlink:href="icons/search.svg"></use>
+        </svg>
+      </button>
     </form>
   </div>
 </header>
