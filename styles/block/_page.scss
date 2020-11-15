@@ -1,0 +1,43 @@
+.page {
+  // $a - area
+  $a-header: header;
+  $a-pre: precontent;
+  $a-content: content;
+  $a-sidebar: sidebar;
+  $a-post: postcontent;
+  $a-footer: footer;
+
+  height: 100%;
+  font-size: 100%;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: "#{$a-header}  #{$a-header}"
+                         "#{$a-pre}     #{$a-pre}"
+                         "#{$a-content} #{$a-sidebar}"
+                         "#{$a-post}    #{$a-post}"
+                         "#{$a-footer}  #{$a-footer}";
+    height: 100%;
+    margin: 0;
+  }
+
+  @each $area in (
+    $a-header,
+    $a-pre,
+    $a-content,
+    $a-sidebar,
+    $a-post,
+    $a-footer
+  ) {
+    &__#{$area} {
+      grid-area: $area;
+    }
+  }
+}

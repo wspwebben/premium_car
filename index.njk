@@ -1,7 +1,16 @@
 {% extends "layout.njk" %}
 
+{% from 'recent.njk' import recent %}
+{% from 'content.njk' import content %}
+{% from 'sidebar.njk' import sidebar %}
+{% from 'popular.njk' import popular %}
+
 {% block content %}
-  <main>
-    content
-  </main>
+  {{ recent('page__precontent') }}
+
+  {{ content('page__content') }}
+
+  {{ sidebar('page__sidebar') }}
+
+  {{ popular('page__postcontent') }}
 {% endblock %}
