@@ -1,0 +1,15 @@
+// @use '../mixin';
+
+.header {
+  --bg-color: var(--color-primary);
+
+  // 
+
+  background-color: var(--bg-color);
+  padding: 30px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
