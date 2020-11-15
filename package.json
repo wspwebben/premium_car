@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.njk",
-    "build": "parcel build index.html"
+    "build": "parcel build index.njk -d docs"
   },
   "keywords": [],
   "author": "",
