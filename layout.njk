@@ -1,3 +1,6 @@
+{% from 'header.njk' import header %}
+{% from 'footer.njk' import footer %}
+
 <!DOCTYPE html>
 <html lang="en" class="page">
 <head>
@@ -7,12 +10,12 @@
   <link rel="stylesheet" href="styles/index.scss">
 </head>
 <body class="page__container">
-  {% include 'header.njk' %}
+  {{ header("page__header") }}
   
   {% block content %}
 
   {% endblock %}
 
-  {% include 'footer.njk' %}
+  {{ footer("page__footer") }}
 </body>
 </html>

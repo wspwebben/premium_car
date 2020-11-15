@@ -1,6 +1,9 @@
-<header class="header">
+{% from 'logo.njk' import logo %}
+
+{% macro header(class) %}
+<header class="header {{ class }}">
   <div class="header__container container">
-    {% include 'logo.njk' %}
+    {{ logo() }}
 
     <nav class="header__navigation main-navigation">
       {% set navigation = {
@@ -29,3 +32,4 @@
     </form>
   </div>
 </header>
+{% endmacro %}

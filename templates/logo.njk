@@ -1,3 +1,5 @@
-<a class="logo" href="/">
+{% macro logo(class) %}
+<a class="logo {{ class }}" href="/">
   <img class="logo__image" src="img/logo.svg" alt="Premium Car">
 </a>
+{% endmacro %}
