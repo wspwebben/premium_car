@@ -4,9 +4,11 @@
   --color-primary: #{$black};
   --color-secondary: #{$blue};
   --color-accent: #{$light-gray};
+  --color-contrast: #{$light-black};
   --color-text: #{$gray};
   --color-text-accent: #{$light-black};
   --color-text-contrast: #{$white};
 
+  --color-fade: #{rgba($black, 0.75)};
   --color-background: #{$white};
 }

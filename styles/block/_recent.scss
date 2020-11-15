@@ -1,0 +1,19 @@
+.recent {
+  $height: 266px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax($height, auto));
+    gap: 30px;
+  }
+
+  &__item {
+    font-size: 20px;
+
+    &--tall {
+      grid-row-end: span 2;
+      font-size: 26px;
+    }
+  }
+}
