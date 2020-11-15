@@ -6,11 +6,13 @@
 {% from 'popular.njk' import popular %}
 
 {% block content %}
-  {{ recent('page__precontent') }}
+  <div class="layout container">
+    {{ recent('layout__precontent') }}
 
-  {{ content('page__content') }}
+    {{ content('layout__content') }}
 
-  {{ sidebar('page__sidebar') }}
+    {{ sidebar('layout__sidebar') }}
 
-  {{ popular('page__postcontent') }}
+    {{ popular('layout__postcontent') }}
+  </div>
 {% endblock %}
