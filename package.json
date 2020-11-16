@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.njk",
-    "build": "parcel build index.njk -d docs"
+    "build": "parcel build index.njk --public-url /premium_car"
   },
   "keywords": [],
   "author": "",
