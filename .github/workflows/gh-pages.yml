@@ -1,4 +1,4 @@
-- name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 uses: JamesIves/github-pages-deploy-action@3.7.1
 with:
   # In order for GitHub to trigger the rebuild of your page you must provide the action with the repositories provided GitHub token.
